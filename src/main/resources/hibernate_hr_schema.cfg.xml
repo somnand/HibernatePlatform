@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!-- http://hibernate.sourceforge.net/ -->
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
+		<property name="connection.username">hibernate</property>
+		<property name="connection.password">hibernate</property>
+		<!-- End of Database connection settings -->
+		<property name="hibernate.current_session_context_class">thread</property>
+		<!-- hbm2ddl.auto property setting -->
+		<property name="hbm2ddl.auto">create</property>
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">1</property>
+		<!-- End of JDBC connection pooling -->
+		<!-- Show SQL in output terminal -->
+		<property name="show_sql">true</property>
+		<!-- Show SQL ending -->
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<!-- SQL Dialect ending -->
+		<!-- Hibernate resource/class mappings -->
+		<!-- To be taken care as the core HR schema as the inbuilt tables are involved -->
+		<!-- <mapping class="types.SimpleEntity"/>
+		<mapping class="types.Employee"/>
+		<mapping class="types.Address"/>
+		<mapping class="types.Vehicle"/>
+		<mapping class="types.Manager"/> 
+		<mapping class="types.User"/>
+		<mapping class="types.RentedVehicle"/> -->
+		<mapping class="types.OrderDetails"/>
+		<mapping class="types.OrderHeader"/>
+		<!-- End of mappings -->
+	</session-factory>
+</hibernate-configuration>
