@@ -23,13 +23,13 @@
 		<!-- SQL Dialect ending -->
 		<!-- Hibernate resource/class mappings -->
 		<!-- To be taken care as the core HR schema as the inbuilt tables are involved -->
-		<!-- <mapping class="types.SimpleEntity"/>
+		<!-- <mapping class="types.SimpleEntity"/> -->
 		<mapping class="types.Employee"/>
 		<mapping class="types.Address"/>
 		<mapping class="types.Vehicle"/>
 		<mapping class="types.Manager"/> 
 		<mapping class="types.User"/>
-		<mapping class="types.RentedVehicle"/> -->
+		<mapping class="types.RentedVehicle"/>
 		<mapping class="types.OrderDetails"/>
 		<mapping class="types.OrderHeader"/>
 		<!-- End of mappings -->
