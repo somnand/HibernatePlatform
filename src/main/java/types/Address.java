@@ -27,7 +27,7 @@ public class Address {
 	@Column(name="addressLine1")
 	private String addressLine1;
 	
-	@OneToOne
+	/*@OneToOne
 	@JoinColumn(name="employee_id")
 	Employee employee;
 	
@@ -36,7 +36,7 @@ public class Address {
 	}
 	public void setEmployee(Employee employee) {
 		this.employee = employee;
-	}
+	}*/
 	public long getId() {
 		return id;
 	}

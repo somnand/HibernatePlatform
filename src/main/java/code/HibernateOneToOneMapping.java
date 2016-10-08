@@ -30,7 +30,7 @@ public class HibernateOneToOneMapping {
 		addressNewYork.setAddressLine1("22 Baker Street,New York");
 		
 		//employee.setEmployeeAddress(addressNewYork);
-		addressNewYork.setEmployee(employee);
+		employee.setEmployeeAddress(addressNewYork);
 		//Getting Transaction
 		Transaction txn=session.beginTransaction();
 		try
