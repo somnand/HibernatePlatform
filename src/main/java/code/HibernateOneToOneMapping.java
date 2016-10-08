@@ -5,6 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import types.Address;
 import types.Employee;
 import types.Manager;
 import types.Vehicle;
@@ -25,17 +26,17 @@ public class HibernateOneToOneMapping {
 		Employee employee = new Employee();
 		employee.setName("Fin-Employee-1");
 		
-		Vehicle vehicle=new Vehicle();
-		vehicle.setVehicleName("Car");				
+		Address addressNewYork=new Address();
+		addressNewYork.setAddressLine1("22 Baker Street,New York");
 		
-		employee.setVehicle(vehicle);
-		
+		//employee.setEmployeeAddress(addressNewYork);
+		addressNewYork.setEmployee(employee);
 		//Getting Transaction
 		Transaction txn=session.beginTransaction();
 		try
 		{
 			session.save(employee);
-			session.save(vehicle);
+			session.save(addressNewYork);
 			
 			
 			txn.commit();

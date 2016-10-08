@@ -23,16 +23,17 @@ public class Employee {
 	private long id;
 	@Column(name="emp_name")
 	private String name;
-	@OneToOne
-	@JoinColumn(name="vehicle_id")
-	private Vehicle vehicle;
 	
-	public Vehicle getVehicle() {
-		return vehicle;
+	/*@OneToOne
+	@JoinColumn(name="address_id")
+	private Address employeeAddress;
+		
+	public Address getEmployeeAddress() {
+		return employeeAddress;
 	}
-	public void setVehicle(Vehicle vehicle) {
-		this.vehicle = vehicle;
-	}
+	public void setEmployeeAddress(Address employeeAddress) {
+		this.employeeAddress = employeeAddress;
+	}*/
 	public long getId() {
 		return id;
 	}
