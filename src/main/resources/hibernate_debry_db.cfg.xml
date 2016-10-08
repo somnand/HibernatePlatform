@@ -22,8 +22,8 @@
 		<property name="dialect">org.hibernate.dialect.DerbyDialect</property>
 		<!-- SQL Dialect ending -->
 		<!-- Hibernate resource/class mappings -->
-		<mapping class="types.Vehicle"/> 
-		<mapping class="types.Manager"/>
+		<mapping class="types.Address"/> 
+		<mapping class="types.Employee"/>
 		
 		<!-- End of mappings -->
 	</session-factory>
