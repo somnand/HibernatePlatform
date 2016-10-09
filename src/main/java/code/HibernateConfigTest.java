@@ -18,8 +18,8 @@ public class HibernateConfigTest {
 		File hibernateCfgFile=null;
 		try
 		{
-			hibernateCfgFile=new File("hibernate_debry_db.cfg.xml");
-			factory=StaticHibernateUtils.getFactory("hibernate_debry_db.cfg.xml");
+			hibernateCfgFile=new File("hibernate_hr_schema.cfg.xml");
+			factory=StaticHibernateUtils.getFactory("hibernate_hr_schema.cfg.xml");
 			System.out.println("Connection Successfull!!!");
 		}
 		catch(HibernateException e)
