@@ -24,6 +24,8 @@
 		<!-- Hibernate resource/class mappings -->
 		<mapping class="types.Address"/> 
 		<mapping class="types.Employee"/>
+		<mapping class="types.Manager"/>
+		<mapping class="types.Vehicle"/>
 		
 		<!-- End of mappings -->
 	</session-factory>

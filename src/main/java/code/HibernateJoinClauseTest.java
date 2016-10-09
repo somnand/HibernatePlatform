@@ -15,7 +15,7 @@ import util.StaticHibernateUtils;
 
 public class HibernateJoinClauseTest {
 
-	private static final String CONFIG_FILE="hibernate_hr_schema.cfg.xml";
+	private static final String CONFIG_FILE="hibernate_debry_db.cfg.xml";
 	
 	public static void main(String[] args)throws HibernateException {
 		//Getting SessionFactory
