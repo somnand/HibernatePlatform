@@ -15,7 +15,7 @@ import util.StaticHibernateUtils;
 
 public class HibernateJoinClauseTest {
 
-	private static final String CONFIG_FILE="hibernate_hr_schema.cfg.xml";
+	private static final String CONFIG_FILE="hibernate_mydb_schema.cfg.xml";
 	
 	public static void main(String[] args)throws HibernateException {
 		//Getting SessionFactory
@@ -55,7 +55,7 @@ public class HibernateJoinClauseTest {
 			
 			for(OrderHeader header : list)
 			{
-				//System.out.println(header+" Details list\n: "+header.getOrderDetailList());
+				System.out.println(header+" Details list\n: "+header.getOrderDetailList());
 			}
 			
 		}

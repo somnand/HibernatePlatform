@@ -15,15 +15,17 @@ public class HibernateConfigTest {
 	public static void main(String[] args)throws Exception {
 		
 		SessionFactory factory=null;
-		File hibernateCfgFile=null;
+		File hibernateCfgFile=null;	
+		
 		try
 		{
-			hibernateCfgFile=new File("hibernate_hr_schema.cfg.xml");
-			factory=StaticHibernateUtils.getFactory("hibernate_hr_schema.cfg.xml");
+			hibernateCfgFile=new File("hibernate_mydb_schema.cfg.xml");
+			factory=StaticHibernateUtils.getFactory("hibernate_mydb_schema.cfg.xml");
 			System.out.println("Connection Successfull!!!");
 		}
 		catch(HibernateException e)
 		{
+			e.printStackTrace();
 			throw e;
 		}
 		finally

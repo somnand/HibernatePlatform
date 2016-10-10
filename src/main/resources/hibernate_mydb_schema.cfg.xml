@@ -4,10 +4,10 @@
 <hibernate-configuration>
 	<session-factory>
 		<!-- Database connection settings -->
-		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
-		<property name="connection.username">hibernate</property>
-		<property name="connection.password">hibernate</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/mysql</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">admin</property>
 		<!-- End of Database connection settings -->
 		<property name="hibernate.current_session_context_class">thread</property>
 		<!-- hbm2ddl.auto property setting -->
@@ -19,7 +19,7 @@
 		<property name="show_sql">true</property>
 		<!-- Show SQL ending -->
 		<!-- SQL dialect -->
-		<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="dialect">org.hibernate.dialect.SQLServer2005Dialect</property>
 		<!-- SQL Dialect ending -->
 		<!-- Hibernate resource/class mappings -->
 		<!-- To be taken care as the core HR schema as the inbuilt tables are involved -->
