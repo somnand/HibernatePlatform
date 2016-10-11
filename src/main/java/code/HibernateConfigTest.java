@@ -20,7 +20,7 @@ public class HibernateConfigTest {
 		try
 		{
 			hibernateCfgFile=new File("hibernate_mydb_schema.cfg.xml");
-			factory=StaticHibernateUtils.getFactory("hibernate_mydb_schema.cfg.xml");
+			factory=StaticHibernateUtils.getFactoryWithServiceRegistry("hibernate_mydb_schema.cfg.xml");
 			System.out.println("Connection Successfull!!!");
 		}
 		catch(HibernateException e)

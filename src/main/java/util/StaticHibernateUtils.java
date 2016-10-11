@@ -7,11 +7,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.TransientObjectException;
+import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.service.ServiceRegistryBuilder;
 
 public class StaticHibernateUtils 
 {
@@ -19,23 +18,22 @@ public class StaticHibernateUtils
 	 * @param cfgFile
 	 * @return SessionFactory
 	 */
-	@SuppressWarnings(value={"deprecation"})
 	public static SessionFactory getFactoryWithServiceRegistry(String cfgFile)throws HibernateException
 	{
 		
-		Configuration cfg=new AnnotationConfiguration();
+		Configuration cfg=new Configuration();
 		cfg.configure(cfgFile);
 		
-		String prop=cfg.getProperty("show_sql");
-		System.out.println("Property : "+prop);
+		//String prop=cfg.getProperty("show_sql");
+		//System.out.println("Property : "+prop);
 		
 		//Fetching configuration Properties
 		Properties configProps=cfg.getProperties();
 		//Building the ServiceRegistryBuilder and adding configuration to it.
-		StandardServiceRegistryBuilder registryBuilder = new ServiceRegistryBuilder();
-		registryBuilder.applySettings(configProps);
+		StandardServiceRegistryBuilder registryBuilder = new StandardServiceRegistryBuilder();
+		registryBuilder.applySettings(configProps);		
 		//Creating ServiceRegistry from Builder
-		ServiceRegistry serviceRegistry=registryBuilder.getBootstrapServiceRegistry();
+		StandardServiceRegistry serviceRegistry=registryBuilder.build();
 		//Building the SessionFactory with the service registry.	
 		SessionFactory sessionFactory=cfg.buildSessionFactory(serviceRegistry);
 		//SessionFactory sessionFactory=cfg.buildSessionFactory();
