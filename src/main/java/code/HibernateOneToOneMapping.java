@@ -24,10 +24,10 @@ public class HibernateOneToOneMapping {
 		
 		
 		Employee employee = new Employee();
-		employee.setName("Fin-Employee-1");
+		employee.setName("Holmes, Sherlock Holmes!!!");
 		
 		Address addressNewYork=new Address();
-		addressNewYork.setAddressLine1("22 Baker Street,New York");
+		addressNewYork.setAddressLine1("12 Baker Street,London");
 		
 		//employee.setEmployeeAddress(addressNewYork);
 		employee.setEmployeeAddress(addressNewYork);

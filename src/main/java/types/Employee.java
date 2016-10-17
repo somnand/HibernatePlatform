@@ -5,6 +5,7 @@ import java.util.Collection;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -17,6 +18,7 @@ import javax.persistence.Table;
 //@Access(value = AccessType.FIELD)
 public class Employee {
 
+	
 	@Id
 	@GeneratedValue
 	@Column(name="emp_id")
@@ -24,7 +26,7 @@ public class Employee {
 	@Column(name="emp_name")
 	private String name;
 	
-	@OneToOne
+	@OneToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="address_id")
 	private Address employeeAddress;
 		
@@ -46,5 +48,10 @@ public class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
+	@Override
+	public String toString() {
+		//return "Employee [id=" + id + ", name=" + name + ", employeeAddress="+ employeeAddress + "]";
+		return "Employee [id=" + id + ", name=" + name + "]";
+	}
 }
