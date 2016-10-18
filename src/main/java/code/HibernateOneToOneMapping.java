@@ -37,8 +37,6 @@ public class HibernateOneToOneMapping {
 		{
 			session.save(employee);
 			session.save(addressNewYork);
-			
-			
 			txn.commit();
 		}
 		catch(HibernateException he)

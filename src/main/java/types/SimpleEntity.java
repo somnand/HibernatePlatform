@@ -11,6 +11,9 @@ import javax.persistence.Table;
 @Table(name="SIMPLE_ENTITY")
 public class SimpleEntity 
 {
+	public SimpleEntity()
+	{}
+	
 	public SimpleEntity(String simpleValue)
 	{
 		this.simpleValue=simpleValue;
