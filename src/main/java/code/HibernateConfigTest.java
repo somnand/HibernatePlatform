@@ -7,7 +7,10 @@ import org.hibernate.SessionFactory;
 
 import util.StaticHibernateUtils;
 
-public class HibernateConfigTest {
+public class HibernateConfigTest 
+{
+	private static final String ORACLE_CONFIG_FILE = "hibernate_hr_schema.cfg.xml";
+	private static final String DEBRY_CONFIG_FILE = "hibernate_debry_db.cfg.xml";
 
 	/**
 	 * @param args
@@ -18,8 +21,8 @@ public class HibernateConfigTest {
 		File hibernateCfgFile=null;
 		try
 		{
-			hibernateCfgFile=new File("hibernate_debry_db.cfg.xml");
-			factory=StaticHibernateUtils.getFactory("hibernate_debry_db.cfg.xml");
+			hibernateCfgFile=new File(ORACLE_CONFIG_FILE);
+			factory=StaticHibernateUtils.getFactory(ORACLE_CONFIG_FILE);
 			System.out.println("Connection Successfull!!!");
 		}
 		catch(HibernateException e)
