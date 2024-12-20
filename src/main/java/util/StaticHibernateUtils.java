@@ -51,7 +51,7 @@ public class StaticHibernateUtils
 	public static SessionFactory getFactory(String cfgFile)throws HibernateException
 	{
 		
-		Configuration cfg=new AnnotationConfiguration();
+		Configuration cfg=new Configuration();
 		cfg.configure(cfgFile);
 		SessionFactory sessionFactory=cfg.buildSessionFactory();
 		return sessionFactory;

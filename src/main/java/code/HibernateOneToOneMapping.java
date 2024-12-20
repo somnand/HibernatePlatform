@@ -7,8 +7,6 @@ import org.hibernate.Transaction;
 
 import types.Address;
 import types.Employee;
-import types.Manager;
-import types.Vehicle;
 import util.StaticHibernateUtils;
 
 public class HibernateOneToOneMapping {
