@@ -1,4 +1,4 @@
-package types;
+package code.types;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,14 +13,14 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="t_pts_project_detail")
-public class Project 
+@Table(name="bb_jira_story")
+public class Story 
 {
-	@Column(name="IRID")
-	private String investmentId; 
+	
+	//Composite Primary Key
 	
 	@Id
-	@Column(name="WORK_EFFORT_ID")
-	private String workEffortId;
+	@Column(name="PLANVIEW_ID")
+	private String planviewId;//Same as Work Effort Id in Project 
 
 }
