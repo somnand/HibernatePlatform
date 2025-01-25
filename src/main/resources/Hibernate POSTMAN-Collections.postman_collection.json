@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "18f253b8-fefa-4721-8dba-8533af5bbf05",
+		"name": "Hibernate POSTMAN-Collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:6000/v1/saveProject",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"investmentId\" : \"IR123455\",\r\n\"workEffortId\" : \"20241232\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:6000/v1/saveProject",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"v1",
+						"saveProject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:6000/v1/getProjects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:6000/v1/getProjects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"v1",
+						"getProjects"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
